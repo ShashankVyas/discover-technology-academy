@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  verifier:
+    platform: linux/x86_64
+    restart: always
+    container_name: verifier
+    image: verifier
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./code/src:/root/verifier/src
+    networks:
+      - verifier_network
+
+networks:
+  verifier_network:

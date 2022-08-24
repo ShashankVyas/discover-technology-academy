@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  issuer:
+    platform: linux/x86_64
+    restart: always
+    container_name: issuer
+    image: issuer
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./code/src:/root/issuer/src
+    networks:
+      - issuer_network
+
+networks:
+  issuer_network:
