@@ -1,0 +1,77 @@
+<html>
+<head>
+	<script>
+		let socket = new WebSocket("ws://localhost:3000/");
+		
+		function updateDiv(id, data) {
+			const div = document.getElementById(id)
+			const html = div.innerHTML + "<br/>" + data;
+			div.innerHTML = html;
+		}
+
+		function wsInit() {
+			socket.onopen = function(e) {
+				console.log("[open] Connection established");
+				socket.send("Client connected");
+				socket.send("info");
+			};
+
+			socket.onmessage = function(event) {
+				console.log(`[message] Data received from server: ${event.data}`);
+				const data = JSON.parse(event.data);
+				if (data.type == "info") {
+					updateDiv("info", "<pre>"+JSON.stringify(data.data,null,4)+"</pre>")
+				}
+				else if (data.type == "log") {
+					updateDiv("log", data.data);
+				}
+				else {
+					updateDiv("log", event.data);
+				}
+			};
+
+			socket.onclose = function(event) {
+				if (event.wasClean) {
+					console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+				} else {
+					// e.g. server process killed or network down
+					// event.code is usually 1006 in this case
+					console.log('[close] Connection died');
+				}
+			};
+
+			socket.onerror = function(error) {
+				console.log(`[error] ${error.message}`);
+			};
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Sample Issuer</h1>
+	<table>
+		<tr>
+			<td style="text-align: center;">
+				<h3>Scan QR code to get a credential</h3>
+			</td>
+			<td style="text-align: center;">
+				<h3>Issuer Info</h3>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img src="/qrcode.png" />
+			</td>
+			<td style="vertical-align: text-top;">
+				<div id="info"></div>
+			</td>
+		</tr>
+	</table>
+	<h2>Logs</h2>
+	<div id="log"></div>
+
+	<script>
+		wsInit();
+	</script>
+</body>
+</html>
