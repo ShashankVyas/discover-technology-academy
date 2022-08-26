@@ -1,5 +1,5 @@
 {
-  "name": "msdkproject",
+  "name": "discoverHolderProject",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,9 +8,10 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
+    "configure": "chmod +x files/configure.sh && ./files/configure.sh",
     "evernym-sdk:configure": "yarn --cwd node_modules/@evernym/react-native-white-label-app run configure",
-    "postinstall": "patch-package --patch-dir ./node_modules/@evernym/react-native-white-label-app/files/patches",
-    "evernym-sdk:configure-android": "./node_modules/@evernym/react-native-white-label-app/files/android/configure-android-mac.sh"
+    "evernym-sdk:configure-android": "./node_modules/@evernym/react-native-white-label-app/files/android/configure-android.sh",
+    "postinstall": "patch-package --patch-dir ./node_modules/@evernym/react-native-white-label-app/files/patches"
   },
   "dependencies": {
     "@evernym/react-native-white-label-app": "https://gitlab.com/evernym/mobile/react-native-white-label-app.git",
