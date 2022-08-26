@@ -1,0 +1,25 @@
+{
+  "project_info": {
+    "project_number": "11",
+    "firebase_url": "https://connectmecloudmsgservice.firebaseio.com",
+    "project_id": "projectid",
+    "storage_bucket": "projectcloudmsgservice.appspot.com"
+  },
+  "client": [{
+    "client_info": {
+      "mobilesdk_app_id": "1:1:android:1",
+      "android_client_info": {
+        "package_name": "package-name"
+      }
+    },
+    "oauth_client": [{
+      "client_id": "id.apps.googleusercontent.com",
+      "client_type": 3
+    }],
+    "api_key": [{
+      "current_key": "key"
+    }],
+    "services": {}
+  }],
+  "configuration_version": "1"
+}
