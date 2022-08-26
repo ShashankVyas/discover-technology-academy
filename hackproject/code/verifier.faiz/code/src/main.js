@@ -233,7 +233,25 @@ async function run() {
 							"cred_def_id": "RKsfZVNZ2X28SUBrYwnQnj:3:CL:335473:latest"
 						}
 					],
-					self_attest_allowed: false
+					 self_attest_allowed: false
+				},
+				{
+					name: 'acctLastFour',
+					restrictions: [
+						{
+							"cred_def_id": "RKsfZVNZ2X28SUBrYwnQnj:3:CL:335473:latest"
+						}
+					],
+					 self_attest_allowed: false
+				},
+				{
+					name: 'routingNbr',
+					restrictions: [
+						{
+							"cred_def_id": "RKsfZVNZ2X28SUBrYwnQnj:3:CL:335473:latest"
+						}
+					],
+					 self_attest_allowed: false
 				}
 			]
 		}
