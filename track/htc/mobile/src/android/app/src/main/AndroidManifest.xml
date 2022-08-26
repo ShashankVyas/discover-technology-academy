@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.msdkproject">
+          package="com.discoverholderproject">
 
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -25,17 +25,16 @@
     android:theme="@style/AppTheme"
     android:icon="@mipmap/ic_launcher">
 
-    <!--    Firebase configuration -->
-    <!--    <service android:name="io.invertase.firebase.messaging.RNFirebaseInstanceIdService">-->
-    <!--      <intent-filter>-->
-    <!--        <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>-->
-    <!--      </intent-filter>-->
-    <!--    </service>-->
-    <!--    <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@mipmap/ic_launcher" tools:replace="android:resource" />-->
+
+        <service android:name="io.invertase.firebase.messaging.RNFirebaseInstanceIdService">
+          <intent-filter>
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+          </intent-filter>
+        </service>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@mipmap/ic_launcher" tools:replace="android:resource" />
 
     <activity
       android:name=".MainActivity"
-	  android:exported="true"
       android:theme="@style/MIDSVerificationTheme"
       android:launchMode="singleTask"
       android:label="@string/app_name"
@@ -52,7 +51,7 @@
       <!--     Deep Linking configuration -->
       <!--        &lt;!&ndash; Branch URI Scheme, IMPORTANT! The <data> element has to contain android:scheme='name of scheme on branch.io dashboard' otherwise it will not be handled by branch. &ndash;&gt;-->
       <!--        <intent-filter>-->
-      <!--            <data android:scheme="com.msdkproject" android:host="open"/>-->
+      <!--            <data android:scheme="com.discoverholderproject" android:host="open"/>-->
       <!--            <action android:name="android.intent.action.VIEW" />-->
       <!--            <category android:name="android.intent.category.DEFAULT" />-->
       <!--            <category android:name="android.intent.category.BROWSABLE" />-->
@@ -63,11 +62,11 @@
       <!--            <category android:name="android.intent.category.DEFAULT" />-->
       <!--            <category android:name="android.intent.category.BROWSABLE" />-->
       <!--            <data android:scheme="https" android:host="vty.im" /> -->
-      <!--            <data android:scheme="https" android:host="com.msdkproject.app.link" />-->
-      <!--            <data android:scheme="https" android:host="link.com.msdkproject" />-->
+      <!--            <data android:scheme="https" android:host="com.discoverholderproject.app.link" />-->
+      <!--            <data android:scheme="https" android:host="link.com.discoverholderproject" />-->
       <!--            &lt;!&ndash; We might have to enable on the basis of debugging with above link &ndash;&gt;-->
       <!--            &lt;!&ndash; <data android:scheme="https" android:host="bnc.lt" /> &ndash;&gt;-->
-      <!--            <data android:scheme="com.msdkproject" android:host="app.link" />-->
+      <!--            <data android:scheme="com.discoverholderproject" android:host="app.link" />-->
       <!--        </intent-filter>-->
       <!--        &lt;!&ndash; App Links of other Aries compatible products &ndash;&gt;-->
       <!--        <intent-filter>-->
