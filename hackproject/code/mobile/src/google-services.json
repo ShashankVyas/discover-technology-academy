@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "985082602450",
+    "project_id": "dfs-hackathon-dta",
+    "storage_bucket": "dfs-hackathon-dta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985082602450:android:59ff70d3d8e0bb446f9e0b",
+        "android_client_info": {
+          "package_name": "com.discoverholderproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985082602450-b161l94i3ocqv71bdl4mef6v57dhdrc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpBIeo1wAewbOfVv-MFuIvDZhLfpyGK3Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985082602450-b161l94i3ocqv71bdl4mef6v57dhdrc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
